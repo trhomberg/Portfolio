@@ -7,10 +7,10 @@
     include("info.php");
 
     $mail = new PHPMailer(true);
+    $user = getenv('USERNAME');
+    $pass = getenv('PASSWORD');
 if(isset($_POST['submit'])){
     try {
-        $user = getenv('USERNAME');
-        $pass = getenv('PASSWORD');
         $name = $_POST['name'];
         $email = $_POST['email'];
         $message = $_POST['message'];
