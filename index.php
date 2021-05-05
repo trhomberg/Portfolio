@@ -16,10 +16,10 @@ if(isset($_POST['submit'])){
         $message = $_POST['message'];
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;
         $mail->isSMTP();
-        $mail->Host =      "smtp host";
+        $mail->Host =      "smtp.gmail.com";
         $mail->SMTPAuth = true;
         $mail->Username = $user;
-        $mail->Password = $password;
+        $mail->Password = $pass;
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
