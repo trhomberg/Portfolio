@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+// Variables
+$pop-color: #D11515;
+$background-color: #E0E0E0;
+$base-color: #696969;
+$color-black: #000;
+$color-white: #fff;
+$card-height: 440px;
+$card-width: 840px;
+$card-hover-offset-x: 40px;
+$card-hover-offset-y: 60px;
+$item-size: 12px;
+$item-size-active: $item-size * 1.5;
+
+$transition-time: 250ms;
+$transition-method: ease-in-out;
+
+
+  *, 
+  *::before, 
+  *::after {
+    box-sizing: inherit;
+    line-height: inherit;
+  }
+
+  html {
+      box-sizing: border-box;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    background-color: $background-color;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+header {
+    height: 100vh;
+}
+
+.nav-link, .social-link {
+    text-decoration: none;
+    color: $base-color;
+
+    &:hover {
+        cursor: pointer;
+        color: $pop-color;
+    }
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+// Navbar section
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+    .nav-ul {
+        list-style: none;
+        padding: 10px 0;
+
+        li {
+            display: inline;
+            margin: 40px;
+        }
+    }
+}
+
+// Hero section
+.hero {
+    display: flex;
+    justify-content: space-between;
+
+    .hero-text {
+        margin-top: 2em;
+
+        h1 {
+            font-family: 'Impact';
+            font-size: 98px;
+            color: $pop-color;
+            line-height: 80px;
+        }
+
+        h4 {
+            font-size: 30px;
+            font-weight: medium;
+            color: $base-color;
+        }
+
+        .hero-button {
+            width: 333px;
+            height: 50px;
+            border-radius: 24px;
+            border-width: 0;
+            background-color: $pop-color;
+            color: $color-white;
+            font-size: 25px;
+            font-weight: bold;
+
+            &:hover,
+            &:focus {
+                cursor: pointer;
+                box-shadow: 0 0.5em 0.5em -0.4em $pop-color;
+                transform: translateY(-0.25em);
+            }
+        }
+    }
+}
+
+.hero-vector {
+    position: relative;
+
+   #text-bubble {
+       opacity: 0;
+   }
+
+   svg:hover #text-bubble {
+       animation: showTextBubble 2s ease-in forwards;
+   }
+}
+
+.down-arrow {
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    border-style: solid;
+    border-color: $color-black;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+    position: absolute;
+    bottom: 1;
+    left: 50%;
+}
+
+// Fixed icons
+.social-icons {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 1000;
+
+    ul {
+        list-style: none;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }   
+    }
+}
+
+// Projects section
+.projects-title {
+    position: relative;
+    color: $pop-color;
+
+    h1 {
+        text-align: center;
+        letter-spacing: 1.5pt;
+        font-size: 50px; 
+    }
+}
+
+.projects-position {
+    position: relative;
+}
+
+%clearfix {
+
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+.card-project-wrapper {
+    box-shadow: 0px 0px 100px 25px rgba($color-black, 0.2);
+    height: $card-height;
+    width: $card-width;
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    margin-top: 25em;
+
+    &:hover {
+        .card-project-carousel {
+            -webkit-transition: all $transition-time $transition-method;
+            -moz-transition: all $transition-time $transition-method;
+            transition: all $transition-time $transition-method;
+            bottom: $card-hover-offset-y;
+            right:$card-hover-offset-x;
+        }
+    }
+}
+
+.card-project-wrapper--centered {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.card-project-carousel {
+    -webkit-transition: all $transition-time $transition-method 250ms;
+    -moz-transition: all $transition-time $transition-method 250ms;
+    transition: all $transition-time $transition-method 250ms;
+    height: $card-height;
+    width: $card-width;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.card-project-navigation {
+    background-color: $color-white;
+    bottom: 0;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 15;
+
+    &__list {
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        position: absolute;
+        top: 50%;
+        right: ($card-hover-offset-x - $item-size) / 2;
+        width: $item-size-active;
+        padding: 0 4px;
+
+        li {
+            -webkit-transition: all $transition-time $transition-method;
+            -moz-transition: all $transition-time $transition-method;
+            transition: all $transition-time $transition-method;
+            background-color: #ccc;
+            border-radius: 100%;
+            cursor: pointer;
+            height: $item-size;
+            margin: 0 auto $item-size/2;
+            width: $item-size;
+            list-style: none;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.is-active {
+                height: $item-size-active;
+                width: $item-size-active;
+            }
+
+            &:hover {
+                background-color: #bbb;
+            }
+        }
+    }
+}
+
+.card-project {
+    -webkit-transition: all ($transition-time * 2) $transition-method;
+    -moz-transition: all ($transition-time * 2) $transition-method;
+    transition: all ($transition-time * 2) $transition-method;
+    background-size: cover;
+    bottom: 0;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: 20;
+
+    &__content {
+        left: 100px;
+        position: absolute;
+        top: 50px;
+    }
+
+    &__title {
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    &__details {
+        @extend %clearfix;
+        margin: 10px 24px 0px 0px;
+
+        &-item {
+            display: block;
+            float: left;
+            padding: 0;
+        }
+
+        &-list {
+            @extend %clearfix;
+
+            li {
+                float: left;
+                margin-right: 5px;
+                padding-right: 10px;
+                position: relative;
+                list-style: none;
+
+                &:after {
+                    content: '|';
+                    position: absolute;
+                    right: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__description {
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 390px;
+    }
+}
+
+.button-container {
+    .project-buttons__light {
+        background-color: transparent;
+        color: $color-black;
+        border: none;
+        border-bottom: 1px solid black;
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 0px 5px;
+        text-align: center;
+    }
+
+    .project-buttons__dark {
+        background-color: transparent;
+        color: $color-white;
+        border: none;
+        border-bottom: 1px solid $color-white;
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 0 5px;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-black;
+    }
+}
+
+
+.card-project--active {
+    opacity: 1;
+    z-index: 25;
+}
+
+.card-project--light {
+    background-color: #effdfd;
+
+    [class*='__title'] {
+        color: $color-black;
+    }
+}
+
+.card-project--dark {
+    background-color: $color-black;
+    color: #fff;
+
+    [class*='__title'] {
+        color: #fff
+    }
+}
+
+// .card-project--1 {
+//     background-image: url("/assets/images/default-picture.jpg");
+// }
+
+// .card-project--2 {
+//     background-image: url("/assets/images/default-picture.jpg");
+// }
+
+// .card-project--3 {
+//     background-image: url("/assets/images/default-picture.jpg");
+// }
+
+// About section
+
+.about-section {
+
+    &__title {
+        text-align: center;
+        letter-spacing: 1.5pt;
+        font-size: 50px; 
+        color: $pop-color;
+    }
+
+    &__skills {
+        text-align: center;
+        letter-spacing: 1.5pt;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(1fr, 4);
+        text-align: center;
+        list-style: none;
+
+        li {
+            font-size: 18px;
+        }
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+// Contact section  
+
+.contact-section {
+    max-width: 650px;
+    width: 80%;
+    margin: 50px auto;
+
+    &__title {
+        text-align: center;
+        letter-spacing: 1.5pt;
+        font-size: 50px; 
+        padding-bottom: 48px;
+        color: $pop-color;
+    }
+
+    .row {
+
+        .col {
+            padding: 0 20px;
+            float: left;
+            box-sizing: border-box;
+             &.w-50 {
+                 width: 50%;
+             }
+             &.w-100 {
+                 width: 100%;
+             }
+        }
+    }
+
+    &__form {
+
+        .form-field {
+            position: relative;
+            margin: 32px 0;
+        }
+
+        .input-text {
+            display: block;
+            width: 100%;
+            height: 36px;
+            border-width: 0 0 2px 0;
+            border-color: $color-black;
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 400;
+            background-color: transparent;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:focus, 
+            &.not-empty {
+                + .label {
+                    transform: translateY(-24px);
+                }
+            }
+        }
+
+        .label {
+            position: absolute;
+            left: 20px;
+            bottom: 11px;
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 400;
+            color: $base-color;
+            cursor: text;
+            transition: transform $transition-time $transition-method;
+        }
+
+        #submit-btn {
+            width: 333px;
+            height: 50px;
+            border-radius: 24px;
+            border-width: 0;
+            background-color: $pop-color;
+            font-size: 25px;
+            font-weight: bold;
+            color: $color-white;
+
+            &:hover,
+            &:focus {
+                cursor: pointer;
+                box-shadow: 0 0.5em 0.5em -0.4em $pop-color;
+                transform: translateY(-0.25em);
+            }
+        }
+    }
+}
+
+
+
+@keyframes showTextBubble {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
