@@ -4,7 +4,6 @@
     use PHPMailer\PHPMailer\Exception;
 
     require 'vendor/autoload.php';
-    include("info.php");
 
     $mail = new PHPMailer(true);
 if(isset($_POST['submit'])){
