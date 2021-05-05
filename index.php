@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
         $message = $_POST['message'];
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;
         $mail->isSMTP();
-        $mail->Host =      "smtp.gmail.com";
+        $mail->Host =      "smtp host";
         $mail->SMTPAuth = true;
         $mail->Username = $user;
         $mail->Password = $password;
