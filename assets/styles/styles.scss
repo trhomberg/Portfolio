@@ -364,9 +364,14 @@ header {
         text-align: center;
     }
 
-    a {
+    .button_light {
         text-decoration: none;
         color: $color-black;
+    }
+
+    .button_dark {
+        text-decoration: none;
+        color: $color-white;
     }
 }
 
