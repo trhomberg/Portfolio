@@ -102,7 +102,6 @@ header {
             color: $color-white;
             font-size: 25px;
             font-weight: bold;
-            text-decoration: none;
 
             &:hover,
             &:focus {
@@ -346,7 +345,7 @@ header {
         background-color: transparent;
         color: $color-black;
         border: none;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid $color-black;
         display: inline-block;
         padding: 5px 10px;
         margin: 0px 5px;
@@ -364,12 +363,12 @@ header {
         text-align: center;
     }
 
-    .button_dark {
+    .button_dark a {
         text-decoration: none;
         color: $color-white;
     }
 
-    .button_light {
+    .button_light a {
         text-decoration: none;
         color: $color-black;
     }
@@ -397,18 +396,6 @@ header {
         color: #fff
     }
 }
-
-// .card-project--1 {
-//     background-image: url("/assets/images/default-picture.jpg");
-// }
-
-// .card-project--2 {
-//     background-image: url("/assets/images/default-picture.jpg");
-// }
-
-// .card-project--3 {
-//     background-image: url("/assets/images/default-picture.jpg");
-// }
 
 // About section
 
