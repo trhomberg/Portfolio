@@ -363,14 +363,9 @@ header {
         text-align: center;
     }
 
-    .button_dark a {
+    a {
         text-decoration: none;
-        color: $color-white;
-    }
-
-    .button_light a {
-        text-decoration: none;
-        color: $color-black;
+        color: inherit
     }
 }
 
