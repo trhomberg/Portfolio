@@ -31,7 +31,7 @@
                 <h1>Implement.</h1>
          
                 <h4>Professional Front-end Development.</h4>
-                <button type='button' class='hero-button'>Resume</button>
+                <button type='button' class='hero-button'><a href=''>Resume</a></button>
             </div>
 
             <div class='hero-vector'>
@@ -153,7 +153,7 @@
                     </div>
                     <div class="button-container">
                         <button  class='project-buttons__light'><a href="">Live Preview</a></button>
-                        <button  class='project-buttons__light'><a href="">Github</a></button>
+                        <button  class='project-buttons__light'><a href="https://github.com/trhomberg/ip-address-tracker">Github</a></button>
                     </div>
                 </div>
             </div>
@@ -179,26 +179,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-project card-project--light card-project--3">
-                <div class="card-project__content">
-                    <div class="card-project__title">API App</div>
-                    <div class="card-project__details">
-                        <ul class="card-project__details-item card-project__details-list">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Javascript</li>
-                        </ul>
-                    </div>
-                    <div class="card-project__description">
-                        <p>This is an API app that takes JSON data and dynamically displays it for the user.</p>
-                    </div>
-                    <div class="button-container">
-                        <button class='project-buttons__light'><a href="">Live Preview</a></button>
-                        <button class='project-buttons__light'><a href="">Github</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="card-project card-project--dark card-project--4">
+            <div class="card-project card-project--light card-project--4">
                 <div class="card-project__content">
                     <div class="card-project__title">Four in a Row</div>
                     <div class="card-project__details">
@@ -221,7 +202,6 @@
         <div class="card-project-navigation">
             <ul class="card-project-navigation__list" data-navigation>
                 <li class="is-active"></li>
-                <li></li>
                 <li></li>
                 <li></li>
             </ul>
