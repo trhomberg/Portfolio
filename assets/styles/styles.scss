@@ -109,11 +109,11 @@ header {
                 box-shadow: 0 0.5em 0.5em -0.4em $pop-color;
                 transform: translateY(-0.25em);
             }
-            
-            a {
-                text-decoration: none;
-                color: $color-white;
-            }
+        }
+
+        #resume {
+            text-decoration: none;
+            color: $color-white;
         }
     }
 }
