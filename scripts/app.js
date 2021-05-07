@@ -25,5 +25,5 @@ $('.js-input').keyup(function () {
 // Resume link
 var resume = "#resume";
 $(resume).click(function () {
-    window.location.href = "https://docs.google.com/document/d/e/2PACX-1vRFD8X4CMISZjRmleC2qJ4N-KYvFhWu8ZnxCMqxHa-wAlnzzxovdoiuSV_-0BDmLHA0uUq7aSGvZn1m/pub";
+    window.location.href = "./2021 Resume Software development.pdf";
 });
