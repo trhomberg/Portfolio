@@ -152,8 +152,8 @@
                         <p>An IP address locator that you input an IP address into the search bar and it will showcase the name of the company/person with the IP address and will show a map of the location of said IP address.</p>
                     </div>
                     <div class="button-container">
-                        <button  class='project-buttons__light'><a href="">Live Preview</a></button>
-                        <button  class='project-buttons__light'><a href="https://github.com/trhomberg/ip-address-tracker">Github</a></button>
+                        <button  class='project-buttons__light'><a href="" class='button_light'>Live Preview</a></button>
+                        <button  class='project-buttons__light'><a href="https://github.com/trhomberg/ip-address-tracker" class='button_light'>Github</a></button>
                     </div>
                 </div>
             </div>
@@ -174,8 +174,8 @@
                         <p>This is a blog web app that allows a user to create a campground and review said campground. It uses CRUD and will showcase all the campgrounds with prices per night.</p>
                     </div>
                     <div class="button-container">
-                        <button class='project-buttons__dark'><a href="">Live Preview</a></button>
-                        <button class='project-buttons__dark'><a href="https://github.com/trhomberg/Campground-Blog">Github</a></button>
+                        <button class='project-buttons__dark'><a href="" class='button_dark'>Live Preview</a></button>
+                        <button class='project-buttons__dark'><a href="https://github.com/trhomberg/Campground-Blog" class='button_dark'>Github</a></button>
                     </div>
                 </div>
             </div>
@@ -193,8 +193,8 @@
                         <p>A classic game of four in a row. Using OOP in order to create classes and interwine all elements to allow the user to drop tokens and use game logic to let a user know if they have won.</p>
                     </div>
                     <div class="button-container">
-                        <button class='project-buttons__light'><a href="">Live Preview</a></button>
-                        <button class='project-buttons__light'><a href="https://github.com/trhomberg/Four-in-a-Row">Github</a></button>
+                        <button class='project-buttons__light'><a href="" class='button_light'>Live Preview</a></button>
+                        <button class='project-buttons__light'><a href="https://github.com/trhomberg/Four-in-a-Row" class='button_light'>Github</a></button>
                     </div>
                 </div>
             </div>

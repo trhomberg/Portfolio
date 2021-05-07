@@ -363,6 +363,16 @@ header {
         margin: 0 5px;
         text-align: center;
     }
+
+    .button_dark {
+        text-decoration: none;
+        color: $color-white;
+    }
+
+    .button_light {
+        text-decoration: none;
+        color: $color-black;
+    }
 }
 
 
