@@ -9,7 +9,6 @@
     $mail = new PHPMailer(true);
 if(isset($_POST['submit'])){
     try {
-        $json = json_decode('private.json', true);
         $name = $_POST['name'];
         $email = $_POST['email'];
         $message = $_POST['message'];
@@ -17,8 +16,8 @@ if(isset($_POST['submit'])){
         $mail->isSMTP();
         $mail->Host =      "smtp.gmail.com";
         $mail->SMTPAuth = true;
-        $mail->Username = $json['email'];
-        $mail->Password = $json['password'];
+        $mail->Username = getenv("USERNAME");
+        $mail->Password = getenv("PASSWORD");
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
