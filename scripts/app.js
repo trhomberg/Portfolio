@@ -25,5 +25,5 @@ $('.js-input').keyup(function () {
 // Resume link
 var resume = "#resume";
 $(resume).click(function () {
-    window.location.href = "/assets/images/2021 Resume Software development.pdf";
+    window.location.href = "/assets/images/SoftwareResume.pdf";
 });
