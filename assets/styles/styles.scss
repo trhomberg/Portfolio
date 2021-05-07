@@ -80,6 +80,11 @@ header {
     .hero-text {
         margin-top: 2em;
 
+        a {
+            text-decoration: none;
+            color: $color-white;
+        }
+
         h1 {
             font-family: 'Impact';
             font-size: 98px;
@@ -108,11 +113,6 @@ header {
                 cursor: pointer;
                 box-shadow: 0 0.5em 0.5em -0.4em $pop-color;
                 transform: translateY(-0.25em);
-            }
-
-            a {
-                text-decoration: none;
-                color: $color-white;
             }
         }
     }
