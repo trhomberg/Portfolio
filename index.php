@@ -175,7 +175,7 @@
                     </div>
                     <div class="button-container">
                         <button class='project-buttons__dark'><a href="">Live Preview</a></button>
-                        <button class='project-buttons__dark'><a href="">Github</a></button>
+                        <button class='project-buttons__dark'><a href="https://github.com/trhomberg/Campground-Blog">Github</a></button>
                     </div>
                 </div>
             </div>
@@ -194,7 +194,7 @@
                     </div>
                     <div class="button-container">
                         <button class='project-buttons__dark'><a href="">Live Preview</a></button>
-                        <button class='project-buttons__dark'><a href="">Github</a></button>
+                        <button class='project-buttons__dark'><a href="https://github.com/trhomberg/Four-in-a-Row">Github</a></button>
                     </div>
                 </div>
             </div>
