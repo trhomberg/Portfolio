@@ -31,7 +31,7 @@
                 <h1>Implement.</h1>
          
                 <h4>Professional Front-end Development.</h4>
-                <button type='button' class='hero-button'><a href=''>Resume</a></button>
+                <button type='button' class='hero-button'><a href='https://docs.google.com/document/d/e/2PACX-1vRFD8X4CMISZjRmleC2qJ4N-KYvFhWu8ZnxCMqxHa-wAlnzzxovdoiuSV_-0BDmLHA0uUq7aSGvZn1m/pub?embedded=true'>Resume</a></button>
             </div>
 
             <div class='hero-vector'>
